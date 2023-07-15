@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=vaa_demo_postgres'
+      - 'MYSQL_PASSWORD=vaa_demo_postgres'
+      - 'MYSQL_ROOT_PASSWORD=vaa_demo_postgres'
+      - 'MYSQL_USER=vaa_demo_postgres'
+    ports:
+      - '3306'
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=vaa_demo_postgres'
+      - 'POSTGRES_PASSWORD=vaa_demo_postgres'
+      - 'POSTGRES_USER=vaa_demo_postgres'
+    ports:
+      - '5432'
